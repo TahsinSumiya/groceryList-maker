@@ -7,15 +7,29 @@ function App() {
   const [list,setList]=useState([])
   const [isEditing,isSetEidting]= useState(false)
   const [editIs,setEditId]=useState(null)
-  const [alert,setAlert]=useState({show:false,msg:'',type:''})
+  const [alert,setAlert]=useState({
+    show:true,
+    msg:'helolo',
+    type:'success',
+  })
 
   const handleSubmit=(e)=>{
   e.preventDefault()
-  console.log("arafath")
+  if(!name){
+   
+  }
+  else if(name && isEditing){
+ 
+  }
+  else{
+    const newItem = {id:new Date().getTime().toString,title:name}
+    setList([...list,newItem]);
+    setName('')
+  }
   }
   return <section className='section-center'>
      <form className='grocery-form' onSubmit={handleSubmit}>
-      {alert.show && <Alert/>}
+      {alert.show && <Alert {...alert} />}
       <h3>grocery bud</h3>
       <div className='form-control'>
         <input type="text" className='grocery'
@@ -25,11 +39,12 @@ function App() {
         <button type='submit' className='submit-btn'>{isEditing?'edit':'submit'}</button>
       </div>
      </form>
+     {list.length>0 &&(
     <div className='grocery-container'>
-      <List/>
+      <List items={list}/>
       <button className='clear-btn'>clear items</button>
     </div>
-
+     )}
 
 
   </section>
