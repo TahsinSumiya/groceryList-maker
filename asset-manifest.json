@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/groceryList-maker/static/css/main.f37b22e1.css",
+    "main.js": "/groceryList-maker/static/js/main.4c71b2d0.js",
+    "index.html": "/groceryList-maker/index.html",
+    "main.f37b22e1.css.map": "/groceryList-maker/static/css/main.f37b22e1.css.map",
+    "main.4c71b2d0.js.map": "/groceryList-maker/static/js/main.4c71b2d0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f37b22e1.css",
+    "static/js/main.4c71b2d0.js"
+  ]
+}
